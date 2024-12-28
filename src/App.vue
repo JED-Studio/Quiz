@@ -1,12 +1,12 @@
 <script>
 import { defineComponent, ref } from 'vue'
-import home from './views/home.vue'
-import Test from './views/Test.vue'
+import HomePage from './views/HomePage.vue';
+import TestPage from './views/TestPage.vue';
 
 export default defineComponent({
   components: {
-    home,
-    Test,
+    HomePage,
+    TestPage,
   },
   setup() {
     const blockIndex = ref(0)
@@ -23,6 +23,6 @@ export default defineComponent({
 </script>
 
 <template>
-  <home v-if="$route.path === '/'" @start-quiz="startQuiz" />
-  <Test v-else :blockIndex="blockIndex" />
+  <HomePage v-if="$route.path === '/'" @start-quiz="startQuiz" />
+  <TestPage v-else :blockIndex="blockIndex" />
 </template>

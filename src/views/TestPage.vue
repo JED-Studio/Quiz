@@ -1,6 +1,6 @@
 <script>
 import { defineComponent, ref, computed } from 'vue'
-import { rawItems } from '../date/questioans'
+import { rawItems } from '../date/questions'
 
 export default defineComponent({
   props: {
