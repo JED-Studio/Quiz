@@ -63,7 +63,7 @@ export default defineComponent({
   <header>
     <h1>Quiz</h1>
     <div v-if="!finish">
-      <h3>{{ currentQpick.title }}</h3>
+      <h3 class="quiz__question">{{ currentQpick.title }}</h3>
       <ul>
         <li v-for="(answer, index) in currentQpick.answer" :key="index" @click="select(index)">
           {{ answer }}
@@ -77,19 +77,28 @@ export default defineComponent({
         {{ results.correct ? 'Правильно' : 'Неправильно' }}
       </div>
     </div>
-    <RouterLink to="/">Назад</RouterLink>
+    <RouterLink to="/" class="quiz__back">Назад</RouterLink>
   </header>
 </template>
 
 <style>
+.quiz__question {
+  color: var(--text-color);
+}
+
+.quiz__back {
+  color: var(--text-color);
+}
+
 ul {
   padding: 0;
 }
 
 li {
   padding: 20px;
+  color: var(--text-color);
   list-style: none;
-  background: #ffffff;
+  background-color: var(--background-color-primary);
   margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.26);
@@ -101,7 +110,7 @@ li {
 }
 
 li:hover {
-  background: #f1f1f1;
+  background-color: var(--background-color-ul);
 }
 
 header {

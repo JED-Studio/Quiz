@@ -70,6 +70,7 @@ h1 {
   font-weight: 800;
   text-align: center;
   padding: 20px 0px;
+  color: var(--text-color);
 }
 
 p {
@@ -77,6 +78,7 @@ p {
   font-weight: 500;
   text-align: center;
   margin-bottom: 40px;
+  color: var(--text-color);
 }
 
 .quiz__chapters-grid {
@@ -91,6 +93,8 @@ p {
   padding: 40px 20px;
   border: 1px solid #d4d4d4;
   border-radius: 10px;
+  background-color: var(--background-color-primary);
+  color: var(--text-color);
 }
 
 .container {
